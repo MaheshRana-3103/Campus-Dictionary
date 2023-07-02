@@ -11,7 +11,7 @@ import { useHistory ,useParams } from "react-router-dom";
     useEffect(() => {
 		const verifyEmailUrl = async () => {
 			try {
-				const url = `http://localhost:4000/api/v1/${param.id}/verify/${param.token}`;
+				const url = `https://campus-dictionary.onrender.com/api/v1/${param.id}/verify/${param.token}`;
         console.log("url:",url);
 				const { data } = await axios.get(url);
 				console.log(data);
