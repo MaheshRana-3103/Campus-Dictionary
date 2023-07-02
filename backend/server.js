@@ -4,7 +4,7 @@ const cors=require("cors");
 const connectDatabase = require("./config/database");
 // Using custom environment file
 const dotenv = require("dotenv");
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./config.env" });
 
 // connecting database
 connectDatabase();
