@@ -60,7 +60,7 @@ export const MeetForm = ({ email ,clgName}) => {
         try {
             // Send email using the backend API endpoint
             setLoader(true);
-            await axios.post('/api/v1/send-email', {
+            await axios.post('https://campus-dictionary.onrender.com/api/v1/send-email', {
                 to: email,
                 cc: userEmail,
                 subject: 'Campus Dictionary Meeting info',

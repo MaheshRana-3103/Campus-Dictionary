@@ -54,7 +54,7 @@ function AddCollege() {
       }
       else{
       setLoader(true);
-      fetch("/api/v1/college/new", {
+      fetch("https://campus-dictionary.onrender.com/api/v1/college/new", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

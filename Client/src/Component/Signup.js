@@ -30,7 +30,7 @@ function Signup() {
     }
     else {
       setLoader(true);
-      fetch("/api/v1/user/register", {
+      fetch("https://campus-dictionary.onrender.com/api/v1/user/register", {
         method: "post",
         headers: {
           "Content-Type": "application/json"

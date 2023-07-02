@@ -25,7 +25,7 @@ function SearchFilter({ isLogin }) {
     }
     const [APIdata, setdata] = useState([]);
     useEffect(() => {
-        axios.get("/api/v1/college/all").then(response => {
+        axios.get(`https://campus-dictionary.onrender.com/api/v1/college/all`).then(response => {
             setdata(response.data);
         })
     }, [])
