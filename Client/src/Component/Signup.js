@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import M from "materialize-css";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Field, Form, Formik } from "formik";
 import * as yup from 'yup'
-import { CircularProgress, InputLabel, MenuItem, Select } from "@mui/material";
+import { CircularProgress, MenuItem, Select } from "@mui/material";
 
 toast.configure();
 function Signup() {
@@ -73,7 +72,7 @@ function Signup() {
                 boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
               }}>
                 <div className="p-4" style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <img class="materialboxed" width="650" style={{maxWidth:'100%'}} src="/banner.png" />
+                  <img class="materialboxed" width="650" style={{maxWidth:'100%'}} src="/banner.png" alt=''/>
                 </div>
                 <div style={{ width: '50%' }}>
                   <div className="card auth-card input-field" style={{ fontFamily: 'monospace' }}>

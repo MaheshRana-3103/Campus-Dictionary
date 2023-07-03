@@ -1,10 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { app } from './firebase'
-import Fimage from "./Fimage"
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ImageGroup } from "semantic-ui-react";
 import { CircularProgress } from "@mui/material";
 
 toast.configure();
@@ -32,22 +29,8 @@ function AddCollege() {
   const userEmail = localStorage.getItem('userEmail');
 
 
-  const upload = (e) => {
-    const file = e.target.files[0];
-    const storageRef = app.storage().ref()
-    const fileRef = storageRef.child(file.name)
-    fileRef.put(file).then(() => {
-      console.log("Uploaded a file")
-    })
-  }
 
   useEffect(() => {
-    if (localStorage.getItem("user") == "HR") {
-      toast.error("HR is not have Access");
-      history.push('/forbidden');
-    }
-
-
     if (url) {
       if(!title||!body||!photo||!meet_link||!placement||!url){
         toast.error('Please enter value in all fields 😖');
@@ -118,7 +101,7 @@ function AddCollege() {
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
       }}>
         <div className="p-4" style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img class="materialboxed" width="650" style={{maxWidth:'100%'}}src="/banner.png" />
+          <img class="materialboxed" width="650" style={{maxWidth:'100%'}}src="/banner.png" alt='' />
         </div>
         <div style={{ width: '50%' }}>
           <div className="card input-filed" style={{

@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import M from "materialize-css";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import { Field, Form, Formik } from "formik";
@@ -69,7 +68,7 @@ function Signin({ setLogin }) {
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
       }}>
         <div className="p-4" style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img  style={{maxWidth:'100%'}} class="materialboxed" width="650" src="/banner.png" />
+          <img  style={{maxWidth:'100%'}} class="materialboxed" width="650" src="/banner.png" alt=''/>
         </div>
         <div style={{ width: '50%' }}>
           <div className="mycard ">

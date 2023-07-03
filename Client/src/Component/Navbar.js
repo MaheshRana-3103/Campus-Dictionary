@@ -1,15 +1,9 @@
 import M from "materialize-css";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import BasicModal from "./LogOut";
 function Navbar({ roleOfUser, isLogin, setLogin }) {
-  const ref = useRef(null);
   const history = useHistory();
-  const handleLogOut = () => {
-    setLogin(false);
-    localStorage.removeItem('jwt');
-    history.push('/');
-  }
   document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);

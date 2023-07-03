@@ -1,5 +1,4 @@
 import React from "react";
-import Signin from "../Signin";
 import { MeetForm } from "../MeetForm";
 import {useLocation} from 'react-router-dom'
 export const ScheduleMeet = () => {
@@ -7,7 +6,6 @@ export const ScheduleMeet = () => {
     const description =(new  URLSearchParams(search).get('description'));
     const name =(new  URLSearchParams(search).get('name'));
     const email =(new  URLSearchParams(search).get('email'));
-    const id =(new URLSearchParams(search).get('_id'));
 
     return (
         <div

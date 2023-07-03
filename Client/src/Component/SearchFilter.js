@@ -31,11 +31,10 @@ function SearchFilter({ isLogin }) {
     }, [])
     const [filteredResults, setFilteredResults] = useState([]);
     const [searchInput, setSearchInput] = useState('');
-    const [showCard, setShowCard] = useState(false);
     const searchItems = (searchValue) => {
         setSearchInput(searchValue)
         if (searchInput !== '') {
-            const filteredData = (APIdata.length != 0) ? (APIdata.colleges.filter((item) => {
+            const filteredData = (APIdata.length !== 0) ? (APIdata.colleges.filter((item) => {
                 return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
             })) : 0
             setFilteredResults(filteredData)
@@ -91,7 +90,7 @@ function SearchFilter({ isLogin }) {
                             </div>
                         )
                     }
-                    )) : (APIdata.length != 0) ? APIdata.colleges.map((item, index) => {
+                    )) : (APIdata.length !== 0) ? APIdata.colleges.map((item, index) => {
                         return (
                             <div className="col-11 col-md-4 col-lg-3 mx-0 mb-4">
                                 <div className="card p-0 overflow-hidden h-100 shadow">
